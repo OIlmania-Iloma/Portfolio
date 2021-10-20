@@ -1,0 +1,116 @@
+$bgcolor:#000;
+$h1font:calc(1.7vh +2vw);
+$fontcol:#2f0218;
+$pfont:calc(1.3rem + 2.1vw);
+//below a mixin with @mixin
+@mixin div-elemnts {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+         box-shadow: 0 8px 6px -6px black;
+}
+@mixin buttons{
+    font: {
+        size: calc(1.1rem + 1.7vw);
+        weight:500;
+        family:"sans-serif";     
+    }
+    background-color: $bgcolor;
+    color: #fbc11a;
+}
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    background-image:url("IMG_6816.JPG");
+}
+//Using the sass placeholder % which can be extended anywhere in the sassScript...it's like a container to hold a style which can be extended
+%text{
+    font: {
+        family: 'Raleway', sans-serif;        
+        size:$pfont;
+        weight:650;
+
+    }
+}
+
+
+nav{
+    ul{list-style-type: none;
+      
+        .nav-img{
+            img{
+                width: calc(5.5vh + 7.5vw);
+                border: {
+                    radius:50%
+                }
+            }
+        }
+        #MyClockDisplay{
+            position: absolute;
+            top:30px;
+            right:30px;
+            background-color: $bgcolor;
+            color: #4d9699;
+            font: {
+                family:orbitron;
+                size: $pfont;
+            }
+        }
+        .name{
+            a{
+                @include div-elemnts;//i use a mixin with @ include
+                color:$fontcol;
+                background-color: $bgcolor;
+                text-decoration: none;
+                font: {
+                    size: $pfont;
+                }
+                color: #4d9699;
+                &:hover{
+                    font-size: $h1font;
+                    $h1font: calc(1.2vh + 2vw); //this is shadowing, declearing a local variable with the name of a global variable $h1
+                }
+            }
+        }
+       
+    }
+}
+
+.detail{
+    display: inline-flex;
+    .dropdown{
+        position: relative;
+        display: inline-block;
+        #tools-cont{
+            background: url("IMG_6816.JPG");
+            color: #fbc11a;
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            a {display: block;}
+        }
+        #contact{
+            background: url("IMG_6816.JPG");
+            //background-color: $bgcolor;
+            color: #fbc11a;
+            display: none;
+            position: absolute;
+            min-height:160px ;
+            a {display: block;}
+        }
+    }
+}
+//i use extend %text 
+.info-text{
+    @extend %text;
+    background-color: $bgcolor;
+    p{
+        margin: 1.3rem;
+        color: #4d9699  
+    }
+    
+}
+button{
+    @include buttons;
+}

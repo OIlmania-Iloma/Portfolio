@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-image: url("IMG_6816.JPG"); }
+
+.info-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: calc(1.3rem + 2.1vw);
+  font-weight: 650; }
+
+nav ul {
+  list-style-type: none; }
+  nav ul .nav-img img {
+    width: calc(5.5vh + 7.5vw);
+    border-radius: 50%; }
+  nav ul #MyClockDisplay {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #000;
+    color: #4d9699;
+    font-family: orbitron;
+    font-size: calc(1.3rem + 2.1vw); }
+  nav ul .name a {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    color: #2f0218;
+    background-color: #000;
+    text-decoration: none;
+    font-size: calc(1.3rem + 2.1vw);
+    color: #4d9699; }
+    nav ul .name a:hover {
+      font-size: calc(1.7vh +2vw); }
+
+.detail {
+  display: inline-flex; }
+  .detail .dropdown {
+    position: relative;
+    display: inline-block; }
+    .detail .dropdown #tools-cont {
+      background: url("IMG_6816.JPG");
+      color: #fbc11a;
+      display: none;
+      position: absolute;
+      min-width: 160px; }
+      .detail .dropdown #tools-cont a {
+        display: block; }
+    .detail .dropdown #contact {
+      background: url("IMG_6816.JPG");
+      color: #fbc11a;
+      display: none;
+      position: absolute;
+      min-height: 160px; }
+      .detail .dropdown #contact a {
+        display: block; }
+
+.info-text {
+  background-color: #000; }
+  .info-text p {
+    margin: 1.3rem;
+    color: #4d9699; }
+
+button {
+  font-size: calc(1.1rem + 1.7vw);
+  font-weight: 500;
+  font-family: "sans-serif";
+  background-color: #000;
+  color: #fbc11a; }
+
+/*# sourceMappingURL=myscss.css.map */
